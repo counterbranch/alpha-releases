@@ -9,4 +9,6 @@ Use the [Counterbranch Action](https://github.com/counterbranch/counterbranch-ac
 with its documented, pinned release configuration. Published kits include signature bundles
 and are distributed through immutable GitHub releases.
 
-No alpha kit is available yet. Native Linux qualification and workflow acceptance are in progress.
+See [Releases](https://github.com/counterbranch/alpha-releases/releases) for available kits,
+qualification results and known limitations. A kit release does not by itself establish that
+the public Action workflow has passed acceptance; check the qualification status in its release notes.
