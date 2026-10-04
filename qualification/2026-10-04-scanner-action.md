@@ -15,7 +15,15 @@ These earlier results were recorded in controlled maintainer qualification and d
 
 On 4 October, the configurable-retention Action revision [`697a7aade78ebd555196b6ee3cf582f5d3836d1d`](https://github.com/counterbranch/counterbranch-action/commit/697a7aade78ebd555196b6ee3cf582f5d3836d1d) passed local replay through its exact run, report-bundle and comment helpers for `CLEAN`, `NEEDS_OWNER_REVIEW`, `INCOMPLETE`, and a controlled `UNKNOWN` failure. Bundle membership and provenance, the exported manifest, and requested-retention wording for 7 and 14 days passed. Four focused retention/delivery tests also passed. Its source change had passed 154 Action tests and 18 exporter tests.
 
-That replay used retained macOS debug binaries; their bytes differ from the published Linux kit. It does **not** qualify Linux execution, public acquisition, hosted artifact retention or live comment API delivery for this Action revision. Those checks and the public installation demonstration remain pending. The record must include exact public run links and observed results before advertising them as qualified.
+A later synthetic incomplete-coverage example exposed a comment presentation defect in that revision: short lists could show negative hidden-item counts, and unmodelled paths lacked revision links. The underlying result remained correctly `INCOMPLETE`.
+
+The corrected executable Action is [`5986b29668feaba22f328f11b62c1d4dcbd30f8e`](https://github.com/counterbranch/counterbranch-action/commit/5986b29668feaba22f328f11b62c1d4dcbd30f8e). Its source change passed 43 focused comment tests. Local replay of that exact revision passed `CLEAN`, `NEEDS_OWNER_REVIEW`, `INCOMPLETE`, and a controlled `UNKNOWN` failure. Successful cases produced the four expected report files; the failure bundle contained three files and no comparison or CLEAN claim. Manifest hashes, sizes and modes, report provenance, 7- and 14-day requested-retention wording, corrected counts, and exact-revision path links passed.
+
+The synthetic guard change retained one stable handler changing from guarded to apparently unguarded. The incomplete example retained truncation and unmodelled-path evidence; its zero comparison counters represent unknown deltas, not evidence of no changes. Added or deleted paths may be absent at one of the comment's paired revision links.
+
+The installation-documentation export [`b23da39289dee26b303fc245b478a8328a244916`](https://github.com/counterbranch/counterbranch-action/commit/b23da39289dee26b303fc245b478a8328a244916) differs from the executable revision only in `README.md` and `MANIFEST.json`; the installation workflow pins the executable revision above.
+
+These local replays used retained macOS debug binaries; their bytes differ from the published Linux kit. They do **not** qualify Linux execution, public acquisition, hosted artifact retention or live comment API delivery for the corrected Action revision. Those checks and the public installation demonstration remain pending. The record must include exact public run links and observed results before advertising them as qualified.
 
 ## Scope and limits
 
